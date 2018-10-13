@@ -1,0 +1,68 @@
+.ms-container {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .ms-container:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%; }
+
+.ms-container--horizontal {
+  width: 400px;
+  height: 90px;
+  max-width: 100%; }
+  .ms-container--horizontal:before {
+    left: calc(50% - 45px);
+    top: 0;
+    width: 90px;
+    height: 100%; }
+  .ms-container--horizontal .ms-track {
+    left: calc(50% - 45px); }
+  .ms-container--horizontal.ms-container--reverse .ms-track {
+    flex-direction: row-reverse;
+    left: auto;
+    right: calc(50% - 45px); }
+  .ms-container--horizontal .ms-slide {
+    display: inline-flex; }
+
+.ms-container--vertical {
+  width: 90px;
+  height: 400px;
+  max-height: 100%; }
+  .ms-container--vertical:before {
+    left: 0;
+    top: calc(50% - 45px);
+    width: 100%;
+    height: 90px; }
+  .ms-container--vertical .ms-track {
+    flex-direction: column;
+    top: calc(50% - 45px); }
+  .ms-container--vertical.ms-container--reverse .ms-track {
+    flex-direction: column-reverse;
+    top: auto;
+    bottom: calc(50% - 45px); }
+  .ms-container--vertical .ms-slide {
+    display: flex; }
+
+.ms-track {
+  display: flex;
+  position: absolute;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.ms-slide {
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  user-select: none; }
+  .ms-slide:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .ms-slide:nth-child(2n + 1) {
+    background-color: rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=ms-base.css.map */

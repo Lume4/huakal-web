@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+$primary-font-stack: 'Lato', sans-serif;
+$secondary-font-stack: 'Merriweather', serif;
+
+$primary-text-color: white;
+$secondary-text-color: #17adaa;
+
+$hero-title-size: 46px;
+$primary-title-size: 42px;
+$secondary-title-size: 28px;
+$content-title-size: 24px;
+$content-text-size: 14px;
+
+$title-line-height: 36px;
+
+$primary-bg-color: #131417;
+$secondary-bg-color: #18191e;
+
+////////////////////////////////////
+html {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    h1, h2, h3, h4, h5, li a {
+        font-family: $primary-font-stack;
+    }
+
+    p {
+        font-family: $secondary-font-stack;
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+
+        img {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+
+    section {
+        float: left;
+        width: 90%;
+        padding: 0 5%;
+        overflow: hidden;
+
+        h3 {
+            font-size: $primary-title-size;
+            width: 250px;
+            line-height: $title-line-height;
+            float: left;
+            text-align: left;
+            clear: both;
+            margin: 20px 0;
+        }
+
+        h4 {
+            font-size: $secondary-title-size;
+            width: 300px;
+            font-weight: 100;
+            float: left;
+            text-align: left;
+            clear: both;
+            margin: 10px 0;
+        }
+
+        h5 {
+            font-size: $content-title-size;
+        }
+
+        p {
+            font-size: $content-text-size;
+        }
+    }
+
+    .header, .footer {
+        float: left;
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+
+.header {
+
+    .left {
+        width: 50%;
+        float: left;
+
+        figure {
+            img {
+                width: 160px;
+                margin: 15px 0;
+            }
+        }
+    }
+
+    .right {
+        width: 50%;
+        float: left;
+
+        nav {
+            width: 100%;
+            text-align: left;
+            float: right;
+
+            .clicked {
+                display: block;
+                right: 0;
+            }
+
+            ul {
+                list-style: none;
+                text-align: center;
+                float: right;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        display: block;
+                        padding: 15px;
+                        text-decoration: none;
+                        margin: 0 10px;
+                        color: $primary-text-color;
+                    }
+
+                    @media screen and (max-width: 960px) {
+                        display: initial;
+                    }
+                }
+
+                @media screen and (max-width: 960px) {
+                    display: none;
+                    position: absolute;
+                    top: 60px;
+                    right: 0px;
+                    background-color: $primary-bg-color;
+                }
+            }
+
+            .mobile {
+                display: none;
+
+                button {
+                    color: transparent;
+                    background-color: transparent;
+                    border: 0;
+                    width: 32px;
+                    height: 32px;
+                    padding: 0;
+                    float: right;
+                    margin: 20px;
+                }
+
+                @media screen and (max-width: 960px) {
+                    display: block;
+                }
+            }
+        }
+    }   
+}
+
+.hero {
+    h2 {
+        font-size: $hero-title-size;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        padding: 250px 0;
+
+        @media screen and (max-width: 580px) {
+            font-size: 36px;
+        }
+        
+        span {
+            color: $secondary-text-color;
+        }
+    }
+}
+
+.process {
+    .stepGrid {
+        float: left;
+        width: 100%;
+        margin: 150px 0;
+
+        div {
+            float: left;
+            width: 15%;
+            padding: 10px 5%;
+            
+            figure {
+                text-align: center;
+            }
+
+            @media screen and (max-width: 960px) {
+                width: 40%;
+                height: 550px;
+            }
+
+            @media screen and (max-width: 580px) {
+                width: 80%;
+                margin: 20px 10%;
+            }
+        }
+    }
+}
+
+.services {
+    h3 {
+        float: right;
+        text-align: right;
+    }
+
+    h4 {
+        float: right;
+        text-align: right;
+        margin-bottom: 140px;
+    }
+
+    .serviceGrid {
+        width: 860px;
+        margin: 0 auto;
+        clear: both;
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+        }
+
+        .serviceItem {
+            width: 410px;
+            height: 490px;
+            float: left;
+            margin: 10px;
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media screen and (max-width: 580px) {
+                width: 80%;
+                height: 350px;
+            }
+
+            &:nth-child(1) {
+                background-image: url('../img/web.png');
+            }
+
+            &:nth-child(2) {
+                background-image: url('../img/ecommerce.png');
+            }
+
+            &:nth-child(3) {
+                background-image: url('../img/branding.png');
+            }
+
+            &:nth-child(4) {
+                background-image: url('../img/consultoria.png');
+            }
+
+            &:hover {
+                .overlay {
+                    height: calc(100% - 30px);
+                    margin-top: 0;
+                    padding-top: 30px;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                h5 {
+                    margin: 20% 0 32px;
+                    transition: all 0.5s ease-in-out;
+
+                    @media screen and (max-width: 580px) {
+                        margin: 0;
+                    }
+                }
+
+                hr {
+                    display: block;
+                    opacity: 1;
+                    transition: all 1s ease-in-out;
+                    transition-delay: 2s;
+                }
+
+                p {
+                    display: block;
+                    opacity: 1;
+                    transition: all 1s ease-in-out;
+                    transition-delay: 2s;
+                }
+            }
+
+            @media screen and (max-width: 960px) {
+                float: none;
+                margin: 20px auto;
+            }
+        }
+
+        .overlay {
+            background-color: $secondary-text-color;
+            height: 100px;
+            float: left;
+            width: 100%;
+            margin-top: 50%;
+            transition: all 0.5s ease-in-out;
+
+            h5 {
+                float: left;
+                width: 100%;
+                margin: 0;
+                text-align: center;
+                padding: 32px 0 32px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            hr {
+                display: none;
+                float: left;
+                width: 80%;
+                margin: 10px 10%;
+                border: 1px solid white;
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+
+            p {
+                display: none;
+                float: left;
+                width: 80%;
+                margin: 40px 10%;
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+.work {
+    h3 {
+        margin-top: 140px;
+    }
+
+    h4 {
+        margin-bottom: 140px;
+    }
+}
+
+.tools {
+    h3 {
+        float: right;
+        text-align: right;
+    }
+
+    h4 {
+        float: right;
+        text-align: right;
+    }
+
+    .toolGrid {
+        width: 80%;
+        margin: 150px 0;
+        padding: 0 10%;
+        float: left;
+
+        div {
+            float: left;
+            width: 10%;
+            margin: 25px 3.3333333333%;
+            text-align: center;
+
+            @media screen and (max-width: 960px) {
+                width: 30%;
+                margin: 25px 1.669%;
+            }
+
+            p {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.contact {
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+    .left {
+        width: 50%;
+        float: left;
+        clear: both;
+
+        @media screen and (max-width: 580px) {
+            width: 100%;
+        }
+    }
+
+    .right {
+        width: 50%;
+        float: left;
+        margin-top: -200px;
+
+        @media screen and (max-width: 580px) {
+            width: 100%;
+            margin-top: 0px;
+        }
+    }
+}
+
+.footer {
+    div {
+        p {
+            text-align: center;
+        }
+    }
+}

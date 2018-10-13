@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+html {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #131417;
+  color: white;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+  body h1, body h2, body h3, body h4, body h5, body li a {
+    font-family: "Lato", sans-serif; }
+  body p {
+    font-family: "Merriweather", serif; }
+  body figure {
+    margin: 0;
+    padding: 0; }
+    body figure img {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+  body .container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto; }
+  body section {
+    float: left;
+    width: 90%;
+    padding: 0 5%;
+    overflow: hidden; }
+    body section h3 {
+      font-size: 42px;
+      width: 250px;
+      line-height: 36px;
+      float: left;
+      text-align: left;
+      clear: both;
+      margin: 20px 0; }
+    body section h4 {
+      font-size: 28px;
+      width: 300px;
+      font-weight: 100;
+      float: left;
+      text-align: left;
+      clear: both;
+      margin: 10px 0; }
+    body section h5 {
+      font-size: 24px; }
+    body section p {
+      font-size: 14px; }
+  body .header, body .footer {
+    float: left;
+    width: 90%;
+    margin: 0 5%; }
+
+.header .left {
+  width: 50%;
+  float: left; }
+  .header .left figure img {
+    width: 160px;
+    margin: 15px 0; }
+.header .right {
+  width: 50%;
+  float: left; }
+  .header .right nav {
+    width: 100%;
+    text-align: left;
+    float: right; }
+    .header .right nav .clicked {
+      display: block;
+      right: 0; }
+    .header .right nav ul {
+      list-style: none;
+      text-align: center;
+      float: right; }
+      .header .right nav ul li {
+        display: inline-block; }
+        .header .right nav ul li a {
+          display: block;
+          padding: 15px;
+          text-decoration: none;
+          margin: 0 10px;
+          color: white; }
+        @media screen and (max-width: 960px) {
+          .header .right nav ul li {
+            display: initial; } }
+      @media screen and (max-width: 960px) {
+        .header .right nav ul {
+          display: none;
+          position: absolute;
+          top: 60px;
+          right: 0px;
+          background-color: #131417; } }
+    .header .right nav .mobile {
+      display: none; }
+      .header .right nav .mobile button {
+        color: transparent;
+        background-color: transparent;
+        border: 0;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        float: right;
+        margin: 20px; }
+      @media screen and (max-width: 960px) {
+        .header .right nav .mobile {
+          display: block; } }
+
+.hero h2 {
+  font-size: 46px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 250px 0; }
+  @media screen and (max-width: 580px) {
+    .hero h2 {
+      font-size: 36px; } }
+  .hero h2 span {
+    color: #17adaa; }
+
+.process .stepGrid {
+  float: left;
+  width: 100%;
+  margin: 150px 0; }
+  .process .stepGrid div {
+    float: left;
+    width: 15%;
+    padding: 10px 5%; }
+    .process .stepGrid div figure {
+      text-align: center; }
+    @media screen and (max-width: 960px) {
+      .process .stepGrid div {
+        width: 40%;
+        height: 550px; } }
+    @media screen and (max-width: 580px) {
+      .process .stepGrid div {
+        width: 80%;
+        margin: 20px 10%; } }
+
+.services h3 {
+  float: right;
+  text-align: right; }
+.services h4 {
+  float: right;
+  text-align: right;
+  margin-bottom: 140px; }
+.services .serviceGrid {
+  width: 860px;
+  margin: 0 auto;
+  clear: both; }
+  @media screen and (max-width: 960px) {
+    .services .serviceGrid {
+      width: 100%; } }
+  .services .serviceGrid .serviceItem {
+    width: 410px;
+    height: 490px;
+    float: left;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 580px) {
+      .services .serviceGrid .serviceItem {
+        width: 80%;
+        height: 350px; } }
+    .services .serviceGrid .serviceItem:nth-child(1) {
+      background-image: url("../img/web.png"); }
+    .services .serviceGrid .serviceItem:nth-child(2) {
+      background-image: url("../img/ecommerce.png"); }
+    .services .serviceGrid .serviceItem:nth-child(3) {
+      background-image: url("../img/branding.png"); }
+    .services .serviceGrid .serviceItem:nth-child(4) {
+      background-image: url("../img/consultoria.png"); }
+    .services .serviceGrid .serviceItem:hover .overlay {
+      height: calc(100% - 30px);
+      margin-top: 0;
+      padding-top: 30px;
+      transition: all 0.5s ease-in-out; }
+    .services .serviceGrid .serviceItem:hover h5 {
+      margin: 20% 0 32px;
+      transition: all 0.5s ease-in-out; }
+      @media screen and (max-width: 580px) {
+        .services .serviceGrid .serviceItem:hover h5 {
+          margin: 0; } }
+    .services .serviceGrid .serviceItem:hover hr {
+      display: block;
+      opacity: 1;
+      transition: all 1s ease-in-out;
+      transition-delay: 2s; }
+    .services .serviceGrid .serviceItem:hover p {
+      display: block;
+      opacity: 1;
+      transition: all 1s ease-in-out;
+      transition-delay: 2s; }
+    @media screen and (max-width: 960px) {
+      .services .serviceGrid .serviceItem {
+        float: none;
+        margin: 20px auto; } }
+  .services .serviceGrid .overlay {
+    background-color: #17adaa;
+    height: 100px;
+    float: left;
+    width: 100%;
+    margin-top: 50%;
+    transition: all 0.5s ease-in-out; }
+    .services .serviceGrid .overlay h5 {
+      float: left;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      padding: 32px 0 32px;
+      transition: all 0.5s ease-in-out; }
+    .services .serviceGrid .overlay hr {
+      display: none;
+      float: left;
+      width: 80%;
+      margin: 10px 10%;
+      border: 1px solid white;
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+    .services .serviceGrid .overlay p {
+      display: none;
+      float: left;
+      width: 80%;
+      margin: 40px 10%;
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+
+.work h3 {
+  margin-top: 140px; }
+.work h4 {
+  margin-bottom: 140px; }
+
+.tools h3 {
+  float: right;
+  text-align: right; }
+.tools h4 {
+  float: right;
+  text-align: right; }
+.tools .toolGrid {
+  width: 80%;
+  margin: 150px 0;
+  padding: 0 10%;
+  float: left; }
+  .tools .toolGrid div {
+    float: left;
+    width: 10%;
+    margin: 25px 3.3333333333%;
+    text-align: center; }
+    @media screen and (max-width: 960px) {
+      .tools .toolGrid div {
+        width: 30%;
+        margin: 25px 1.669%; } }
+    .tools .toolGrid div p {
+      margin-top: 20px; }
+
+.contact {
+  margin-bottom: 100px;
+  margin-top: 100px; }
+  .contact .left {
+    width: 50%;
+    float: left;
+    clear: both; }
+    @media screen and (max-width: 580px) {
+      .contact .left {
+        width: 100%; } }
+  .contact .right {
+    width: 50%;
+    float: left;
+    margin-top: -200px; }
+    @media screen and (max-width: 580px) {
+      .contact .right {
+        width: 100%;
+        margin-top: 0px; } }
+
+.footer div p {
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

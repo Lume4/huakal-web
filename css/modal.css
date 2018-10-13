@@ -1,0 +1,111 @@
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10000000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    color: black;
+    z-index: 1000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: white;
+    color: #131417;
+    border: 0 !important;
+    float: left;
+}
+
+.modal-body {
+    height: 100%;
+    padding: 5px 10%;
+    overflow: scroll;
+    color: #131417;
+    float: left;
+    height: 95%;
+}
+
+.modal-body h3 {
+    font-size: 32px;
+    max-width: 350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.modal-body p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.modal-body figure {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.modal-body figure, .modal-body figure img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-body a {
+
+    color: #131417;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 100px;
+    display: inline-block;
+
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #131417;
+}
