@@ -26,29 +26,31 @@ body {
       width: 100%; }
   body .container {
     width: 100%;
-    max-width: 1800px;
+    max-width: 1920px;
     margin: 0 auto; }
   body section {
+    background-color: #131417;
     float: left;
     width: 90%;
     padding: 0 5%;
     overflow: hidden; }
     body section h3 {
-      font-size: 42px;
-      width: 250px;
-      line-height: 36px;
+       font-size: 50px;
+    line-height: 45px;
       float: left;
       text-align: left;
       clear: both;
-      margin: 20px 0; }
+      margin: 10px 0;
+      }
     body section h4 {
-      font-size: 28px;
-      width: 300px;
+      font-size: 24px;
+      width: 30%;
       font-weight: 100;
       float: left;
       text-align: left;
       clear: both;
-      margin: 10px 0; }
+      margin: 10px 0;
+color: #17adaa;}
     body section h5 {
       font-size: 24px; }
     body section p {
@@ -58,11 +60,14 @@ body {
     width: 90%;
     margin: 0 5%; }
 
+.header{
+    position: fixed;
+}
 .header .left {
   width: 50%;
   float: left; }
   .header .left figure img {
-    width: 160px;
+    width: 170px;
     margin: 15px 0; }
 .header .right {
   width: 50%;
@@ -110,6 +115,29 @@ body {
       @media screen and (max-width: 960px) {
         .header .right nav .mobile {
           display: block; } }
+
+
+.hero{
+     background: url("../img/fondoHuakalGeo.png") repeat 0 0;
+     -webkit-animation: bg-scrolling-reverse 45.0s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 45.0s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 45.0s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 45.0s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: -1280px 1220px;
+  }
+}
 
 .hero h2 {
   font-size: 46px;
@@ -245,11 +273,11 @@ body {
 .tools .toolGrid {
   width: 80%;
   margin: 150px 0;
-  padding: 0 10%;
+  padding: 0 15%;
   float: left; }
   .tools .toolGrid div {
     float: left;
-    width: 10%;
+    width: 15%;
     margin: 25px 3.3333333333%;
     text-align: center; }
     @media screen and (max-width: 960px) {
@@ -277,6 +305,65 @@ body {
       .contact .right {
         width: 100%;
         margin-top: 0px; } }
+
+#lemur {
+    background-color: #131417;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 10%;
+    padding-left: 15%;
+    width: 100%;
+    height: 800px;
+    overflow:visible;
+    top: 0;
+    left: 0;
+}
+
+.image__lemur {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin-left: 10%;
+    top: 12%;
+    min-height: 500px;
+    width: 70%;
+    z-index: 10;
+}
+
+.image1 {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.image2 {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+
+.image__hexa {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-left: -0%;
+    top: -0%;
+    min-height: 100%;
+    width: 120%;
+    height: 120%;
+}
+
+
 
 .footer div p {
   text-align: center; }

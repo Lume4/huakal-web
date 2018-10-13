@@ -25,7 +25,7 @@
 		<meta name="twitter:image" content="" />
 
 		<link rel="shortcut icon" href="img/favicon.ico">
-		<link rel="stylesheet" href="css/normalize">
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/workSlider.css">
 		<link rel="stylesheet" href="css/modal.css">
@@ -41,6 +41,9 @@
 
         </script>
         
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        
 	</head>
 	<body>
         
@@ -48,7 +51,7 @@
 		<div class="container">
 
 			<!-- Header -->
-			<div class="header">
+			<div id="navbar" class="header">
 				<div class="left">
 					<figure>
 						<img src="img/logo.png" alt="Estudio Huakal">
@@ -62,9 +65,9 @@
 							</button>
 						</div>
 						<ul class="menu">
-							<li><a href="#">Nuestro proceso</a></li>
-							<li><a href="#">Proyectos</a></li>
-							<li><a href="#">Contacto</a></li>
+							<li><a href="#proceso">Nuestro proceso</a></li>
+							<li><a href="#proyectos">Proyectos</a></li>
+							<li><a href="#contacto">Contacto</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -76,7 +79,7 @@
 			</section>
 
 			<!-- Process -->
-			<section class="process">
+			<section id="proceso" class="process">
 				<h3>Nuestro proceso</h3>
 				<h4>Todo inicia con una estrategía desarrollada a tu medida</h4>
 
@@ -143,7 +146,7 @@
 			</section>
 
 			<!-- Work -->
-			<section class="work">
+			<section id="proyectos" class="work">
 				<h3>Proyectos que amamos</h3>
 				<h4>Conóce un poco del trabajo que desarrollamos día a día</h4>
 
@@ -193,6 +196,10 @@
 						<figure><img src="img/unity.png" alt="Unity"></figure>
 						<p>Unity</p>
 					</div>
+                    <div>
+						<figure><img src="img/cardboard.png" alt="Unity"></figure>
+						<p>Google Cardboard</p>
+					</div>
 				</div>
 					<!--<div>
 						<figure><img src="img/angular.png" alt="Angular"></figure>
@@ -222,20 +229,35 @@
 			</section>
 
 			<!-- Contact -->
-			<section class="contact">
+			<section id="contacto" class="contact">
 				<h3>Contáctanos</h3>
 				<h4>Queremos escuchar de ti y saber con que podemos ayudarte</h4>
+                        <div class="left">
+                            <p>contacto@huakal.com</p>
+                            <p>facebook.com/estudiohuakal/</p>
+                            <p>instagram.com/estudiohuakal/</p>
+                        </div>
 
-				<div class="left">
-					<p>contacto@huakal.com</p>
-					<p>facebook.com/estudiohuakal/</p>
-					<p>instagram.com/estudiohuakal/</p>
-				</div>
+                        <div class="right">
+                            <div id="lemur">
 
-				<div class="right">
-					<figure>
-						<img src="img/lemur.png" alt="Lemur Huakal">
-					</figure>
+                                <div class="image__lemur">
+                                    <div class="image1">
+                                        <figure>
+						<img src="img/lemur-huakal.png" alt="Lemur Huakal">
+					               </figure>
+                                    </div>
+                                </div>
+                                <div class="image__hexa">
+                                    <div class="image2">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+                        <polygon fill="#18BDB9" points="38.5,128.97 249.5,6.94 460.5,128.97 460.5,373.03 249.5,495.06 38.5,373.029 "/>
+                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+					
+                        
 				</div>
 			</section>
 
@@ -371,5 +393,9 @@
 		<script src="js/workSlider.js"></script>
 		<script src="js/mobileMenu.js"></script>
 		<script src="js/modal.js"></script>
+        
+                <!-- Hero Interaction scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+        <script src="js/mousepos.js"></script>
 	</body>
 </html>

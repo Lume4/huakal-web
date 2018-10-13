@@ -55,7 +55,7 @@
         cssClass: 'ms--links',
         range: [0, 4],
         rangeContent: function (i) {
-            return '<a id="' + popuplink[i] + 'Trigger" class="ms-slide__link">View Case</a>'
+            return '<a id="' + popuplink[i] + 'Trigger" class="ms-slide__link">Ver más</a>'
             //return '<a class="ms-slide__link">View Case</a>';
         },
         vertical: true,
