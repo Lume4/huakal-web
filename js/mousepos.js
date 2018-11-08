@@ -43,3 +43,20 @@ window.onscroll = function () {
         myNav.classList.remove("nav-colored");
     }
 };
+
+
+//////   Mouse pointer
+
+var $hexa = $('.hexa');
+
+function moveHexa(e) {
+	TweenLite.to($hexa, 0.35, {
+    css: {
+      left: e.pageX,
+      top: e.pageY,
+    ease: Elastic.easeInOut
+    }
+  });
+}
+
+$(window).on('mousemove', moveHexa);

@@ -1,310 +1,492 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
-@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400,700");
 html {
-  float: left;
-  width: 100%;
-  margin: 0;
-  padding: 0; }
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  background-color: #131417;
-  color: white;
-  float: left;
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-  body h1, body h2, body h3, body h4, body h5, body li a {
-    font-family: "Lato", sans-serif; }
-  body p {
-    font-family: "Merriweather", serif; }
-  body figure {
+    cursor: crosshair;
+    background-color: #131417;
+    color: white;
+    float: left;
+    width: 100%;
     margin: 0;
-    padding: 0; }
-    body figure img {
-      margin: 0;
-      padding: 0;
-      width: 100%; }
-  body .container {
+    padding: 0;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body li a {
+    font-family: "Lato", sans-serif;
+}
+
+body p {
+    font-family: "Merriweather", serif;
+}
+
+body figure {
+    margin: 0;
+    padding: 0;
+}
+
+body figure img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body .container {
     width: 100%;
     max-width: 1920px;
-    margin: 0 auto; }
-  body section {
+    margin: 0 auto;
+}
+
+body section {
     background-color: #131417;
     float: left;
     width: 90%;
     padding: 0 5%;
-    overflow: hidden; }
-    body section h3 {
-       font-size: 50px;
+    overflow: hidden;
+}
+
+body section h3 {
+    font-size: 50px;
     line-height: 45px;
-      float: left;
-      text-align: left;
-      clear: both;
-      margin: 10px 0;
-      }
-    body section h4 {
-      font-size: 24px;
-      width: 30%;
-      font-weight: 100;
-      float: left;
-      text-align: left;
-      clear: both;
-      margin: 10px 0;
-color: #17adaa;}
-    body section h5 {
-      font-size: 24px; }
-    body section p {
-      font-size: 14px; }
-  body .header, body .footer {
+    float: left;
+    text-align: left;
+    clear: both;
+    margin: 10px 0;
+}
+
+body section h4 {
+    font-size: 24px;
+    width: 30%;
+    font-weight: 100;
+    float: left;
+    text-align: left;
+    clear: both;
+    margin: 10px 0;
+    color: #17adaa;
+}
+
+body section h5 {
+    font-size: 24px;
+}
+
+body section p {
+    font-size: 14px;
+}
+
+body .header,
+body .footer {
     float: left;
     width: 90%;
-    margin: 0 5%; }
-
-.header{
-    position: fixed;
+    margin: 0 5%;
 }
+
+.header {
+    position: fixed;
+    background-color: #131417;
+}
+
 .header .left {
-  width: 50%;
-  float: left; }
-  .header .left figure img {
+    width: 50%;
+    float: left;
+}
+
+.header .left figure img {
     width: 170px;
-    margin: 15px 0; }
+    margin: 15px 0;
+}
+
 .header .right {
-  width: 50%;
-  float: left; }
-  .header .right nav {
+    width: 50%;
+    float: left;
+}
+
+.header .right nav {
     width: 100%;
     text-align: left;
-    float: right; }
-    .header .right nav .clicked {
-      display: block;
-      right: 0; }
+    float: right;
+}
+
+.header .right nav .clicked {
+    display: block;
+    right: 0;
+}
+
+.header .right nav ul {
+    list-style: none;
+    text-align: center;
+    float: right;
+}
+
+.header .right nav ul li {
+    display: inline-block;
+}
+
+.header .right nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    border-bottom: solid 0px #17adaa;
+}
+
+.header .right nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: solid 2px #17adaa;
+}
+
+@media screen and (max-width: 960px) {
+    .header .right nav ul li {
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 960px) {
     .header .right nav ul {
-      list-style: none;
-      text-align: center;
-      float: right; }
-      .header .right nav ul li {
-        display: inline-block; }
-        .header .right nav ul li a {
-          display: block;
-          padding: 15px;
-          text-decoration: none;
-          margin: 0 10px;
-          color: white; }
-        @media screen and (max-width: 960px) {
-          .header .right nav ul li {
-            display: initial; } }
-      @media screen and (max-width: 960px) {
-        .header .right nav ul {
-          display: none;
-          position: absolute;
-          top: 60px;
-          right: 0px;
-          background-color: #131417; } }
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        background-color: #131417;
+    }
+}
+
+.header .right nav .mobile {
+    display: none;
+}
+
+.header .right nav .mobile button {
+    color: transparent;
+    background-color: transparent;
+    border: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    float: right;
+    margin: 20px;
+}
+
+@media screen and (max-width: 960px) {
     .header .right nav .mobile {
-      display: none; }
-      .header .right nav .mobile button {
-        color: transparent;
-        background-color: transparent;
-        border: 0;
-        width: 32px;
-        height: 32px;
-        padding: 0;
-        float: right;
-        margin: 20px; }
-      @media screen and (max-width: 960px) {
-        .header .right nav .mobile {
-          display: block; } }
+        display: block;
+    }
+}
 
 
-.hero{
-     background: url("../img/fondoHuakalGeo.png") repeat 0 0;
-     -webkit-animation: bg-scrolling-reverse 45.0s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 45.0s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 45.0s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 45.0s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
+.hero {
+    min-height: 80vh;
+
+    background: url("../img/fondoHuakalGeo.png") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse 45.0s infinite;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse 45.0s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse 45.0s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse 45.0s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
 }
 
 @-webkit-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: -1280px 1220px;
-  }
+    100% {
+        background-position: -1280px 1220px;
+    }
 }
 
 .hero h2 {
-  font-size: 46px;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  padding: 250px 0; }
-  @media screen and (max-width: 580px) {
+    font-size: 46px;
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    padding: 250px 0;
+}
+
+@media screen and (max-width: 580px) {
     .hero h2 {
-      font-size: 36px; } }
-  .hero h2 span {
-    color: #17adaa; }
+        font-size: 36px;
+    }
+}
+
+.hero h2 span {
+    color: #17adaa;
+}
 
 .process .stepGrid {
-  float: left;
-  width: 100%;
-  margin: 150px 0; }
-  .process .stepGrid div {
+    float: left;
+    width: 100%;
+    margin: 100px 0;
+}
+
+.process .stepGrid div {
     float: left;
     width: 15%;
-    padding: 10px 5%; }
-    .process .stepGrid div figure {
-      text-align: center; }
-    @media screen and (max-width: 960px) {
-      .process .stepGrid div {
+    padding: 10px 5%;
+}
+
+.process .stepGrid div figure {
+    text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+    .process .stepGrid div {
         width: 40%;
-        height: 550px; } }
-    @media screen and (max-width: 580px) {
-      .process .stepGrid div {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .process .stepGrid div {
         width: 80%;
-        margin: 20px 10%; } }
+        margin: 20px 10%;
+    }
+}
+
+.process .stepGrid h5 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #17adaa
+}
+
+.process .stepGrid p {
+    font-size: 1em;
+    font-weight: 300;
+}
 
 .services h3 {
-  float: right;
-  text-align: right; }
+    float: right;
+    text-align: right;
+}
+
 .services h4 {
-  float: right;
-  text-align: right;
-  margin-bottom: 140px; }
+    float: right;
+    text-align: right;
+    margin-bottom: 140px;
+}
+
 .services .serviceGrid {
-  width: 860px;
-  margin: 0 auto;
-  clear: both; }
-  @media screen and (max-width: 960px) {
+    width: 860px;
+    margin: 0 auto;
+    clear: both;
+}
+
+@media screen and (max-width: 960px) {
     .services .serviceGrid {
-      width: 100%; } }
-  .services .serviceGrid .serviceItem {
+        width: 100%;
+    }
+}
+
+.services .serviceGrid .serviceItem {
     width: 410px;
     height: 490px;
     float: left;
     margin: 10px;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; }
-    @media screen and (max-width: 580px) {
-      .services .serviceGrid .serviceItem {
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 580px) {
+    .services .serviceGrid .serviceItem {
         width: 80%;
-        height: 350px; } }
-    .services .serviceGrid .serviceItem:nth-child(1) {
-      background-image: url("../img/web.png"); }
-    .services .serviceGrid .serviceItem:nth-child(2) {
-      background-image: url("../img/ecommerce.png"); }
-    .services .serviceGrid .serviceItem:nth-child(3) {
-      background-image: url("../img/branding.png"); }
-    .services .serviceGrid .serviceItem:nth-child(4) {
-      background-image: url("../img/consultoria.png"); }
-    .services .serviceGrid .serviceItem:hover .overlay {
-      height: calc(100% - 30px);
-      margin-top: 0;
-      padding-top: 30px;
-      transition: all 0.5s ease-in-out; }
+        height: 350px;
+    }
+}
+
+.services .serviceGrid .serviceItem:nth-child(1) {
+    background-image: url("../img/web.png");
+}
+
+.services .serviceGrid .serviceItem:nth-child(2) {
+    background-image: url("../img/ecommerce.png");
+}
+
+.services .serviceGrid .serviceItem:nth-child(3) {
+    background-image: url("../img/branding.png");
+}
+
+.services .serviceGrid .serviceItem:nth-child(4) {
+    background-image: url("../img/consultoria.png");
+}
+
+.services .serviceGrid .serviceItem:hover .overlay {
+    height: calc(100% - 30px);
+    margin-top: 0;
+    padding-top: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.services .serviceGrid .serviceItem:hover h5 {
+    margin: 20% 0 32px;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 580px) {
     .services .serviceGrid .serviceItem:hover h5 {
-      margin: 20% 0 32px;
-      transition: all 0.5s ease-in-out; }
-      @media screen and (max-width: 580px) {
-        .services .serviceGrid .serviceItem:hover h5 {
-          margin: 0; } }
-    .services .serviceGrid .serviceItem:hover hr {
-      display: block;
-      opacity: 1;
-      transition: all 1s ease-in-out;
-      transition-delay: 2s; }
-    .services .serviceGrid .serviceItem:hover p {
-      display: block;
-      opacity: 1;
-      transition: all 1s ease-in-out;
-      transition-delay: 2s; }
-    @media screen and (max-width: 960px) {
-      .services .serviceGrid .serviceItem {
+        margin: 0;
+    }
+}
+
+.services .serviceGrid .serviceItem:hover hr {
+    display: block;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    transition-delay: 2s;
+}
+
+.services .serviceGrid .serviceItem:hover p {
+    display: block;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    transition-delay: 2s;
+}
+
+@media screen and (max-width: 960px) {
+    .services .serviceGrid .serviceItem {
         float: none;
-        margin: 20px auto; } }
-  .services .serviceGrid .overlay {
+        margin: 20px auto;
+    }
+}
+
+.services .serviceGrid .overlay {
     background-color: #17adaa;
     height: 100px;
     float: left;
     width: 100%;
     margin-top: 50%;
-    transition: all 0.5s ease-in-out; }
-    .services .serviceGrid .overlay h5 {
-      float: left;
-      width: 100%;
-      margin: 0;
-      text-align: center;
-      padding: 32px 0 32px;
-      transition: all 0.5s ease-in-out; }
-    .services .serviceGrid .overlay hr {
-      display: none;
-      float: left;
-      width: 80%;
-      margin: 10px 10%;
-      border: 1px solid white;
-      opacity: 0;
-      transition: all 0.5s ease-in-out; }
-    .services .serviceGrid .overlay p {
-      display: none;
-      float: left;
-      width: 80%;
-      margin: 40px 10%;
-      opacity: 0;
-      transition: all 0.5s ease-in-out; }
+    transition: all 0.5s ease-in-out;
+}
+
+.services .serviceGrid .overlay h5 {
+    float: left;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 32px 0 32px;
+    transition: all 0.5s ease-in-out;
+}
+
+.services .serviceGrid .overlay hr {
+    display: none;
+    float: left;
+    width: 80%;
+    margin: 10px 10%;
+    border: 1px solid white;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.services .serviceGrid .overlay p {
+    display: none;
+    float: left;
+    width: 80%;
+    margin: 40px 10%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
 
 .work h3 {
-  margin-top: 140px; }
+    margin-top: 140px;
+}
+
 .work h4 {
-  margin-bottom: 140px; }
+    margin-bottom: 140px;
+}
 
 .tools h3 {
-  float: right;
-  text-align: right; }
+    float: right;
+    text-align: right;
+}
+
 .tools h4 {
-  float: right;
-  text-align: right; }
+    float: right;
+    text-align: right;
+}
+
 .tools .toolGrid {
-  width: 80%;
-  margin: 150px 0;
-  padding: 0 15%;
-  float: left; }
-  .tools .toolGrid div {
+    width: 80%;
+    margin: 150px 0;
+    padding: 0 15%;
+    float: left;
+}
+
+.tools .toolGrid div {
     float: left;
     width: 15%;
     margin: 25px 3.3333333333%;
-    text-align: center; }
-    @media screen and (max-width: 960px) {
-      .tools .toolGrid div {
+    text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+    .tools .toolGrid div {
         width: 30%;
-        margin: 25px 1.669%; } }
-    .tools .toolGrid div p {
-      margin-top: 20px; }
+        margin: 25px 1.669%;
+    }
+}
+
+.tools .toolGrid div p {
+    margin-top: 20px;
+}
 
 .contact {
-  margin-bottom: 100px;
-  margin-top: 100px; }
-  .contact .left {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.contact .left {
     width: 50%;
     float: left;
-    clear: both; }
-    @media screen and (max-width: 580px) {
-      .contact .left {
-        width: 100%; } }
-  .contact .right {
-    width: 50%;
-    float: left;
-    margin-top: -200px; }
-    @media screen and (max-width: 580px) {
-      .contact .right {
+    clear: both;
+}
+
+@media screen and (max-width: 580px) {
+    .contact .left {
         width: 100%;
-        margin-top: 0px; } }
+    }
+}
+
+.contact .right {
+    width: 50%;
+    float: left;
+    margin-top: -200px;
+}
+
+@media screen and (max-width: 580px) {
+    .contact .right {
+        width: 100%;
+        margin-top: 0px;
+    }
+}
+
+.contact h4 {
+    margin-bottom: 30px;
+}
+
+.contact a {
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+.contact a:hover {
+    color: #17adaa;
+}
 
 #lemur {
     background-color: #131417;
@@ -315,7 +497,7 @@ color: #17adaa;}
     padding-left: 15%;
     width: 100%;
     height: 800px;
-    overflow:visible;
+    overflow: visible;
     top: 0;
     left: 0;
 }
@@ -363,9 +545,95 @@ color: #17adaa;}
     height: 120%;
 }
 
-
-
 .footer div p {
-  text-align: center; }
+    text-align: center;
+}
+
+
+.hexa {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    margin: -18px 0 0 -18px;
+    background: rgba(23, 173, 170, 0);
+    border-radius: 60%;
+    border-color: rgba(23, 173, 170, 1);
+    border-width: 2px;
+    border-style: solid;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 780px) {
+    .hexa {
+        display: none;
+    }
+}
+
+section p::-moz-selection {
+    background: #17adaa;
+    color: white;
+}
+
+section p::selection {
+    background: #17adaa;
+    color: white;
+}
+
+
+h2::-moz-selection {
+    background: #17adaa;
+    color: white;
+}
+
+h2::selection {
+    background: #17adaa;
+    color: white;
+}
+
+
+h2 span::-moz-selection {
+    background: #131417;
+    color: #17adaa;
+}
+
+h2 span::selection {
+    background: #131417;
+    color: #17adaa;
+}
+
+
+h3::-moz-selection {
+    background: #17adaa;
+    color: white;
+}
+
+h3::selection {
+    background: #17adaa;
+    color: white;
+}
+
+h4::-moz-selection {
+    background: #17adaa;
+    color: white;
+}
+
+h4::selection {
+    background: #17adaa;
+    color: white;
+}
+
+h5::-moz-selection {
+    background: #17adaa;
+    color: white;
+}
+
+h5::selection {
+    background: #17adaa;
+    color: white;
+}
+
 
 /*# sourceMappingURL=main.css.map */
